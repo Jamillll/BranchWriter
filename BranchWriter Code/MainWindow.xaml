@@ -68,20 +68,22 @@
 
             <Rectangle Grid.Column="0" Fill="#222222" />
 
-            <TextBox
-                x:Name="DisplayPage1"
-                Grid.Column="1"
-                Width="600"
-                Height="1000"
-                Margin="0,20,0,0"
-                Padding="60"
-                Panel.ZIndex="0"
-                AcceptsReturn="True"
-                Background="White"
-                MouseDoubleClick="tempSave"
-                SpellCheck.IsEnabled="True"
-                Text=""
-                TextWrapping="Wrap" />
+            <ScrollViewer Grid.Column="2">
+                <TextBox
+                    x:Name="DisplayPage1"
+                    Grid.Column="1"
+                    Width="600"
+                    Height="1000"
+                    Margin="0,20,0,20"
+                    Padding="60"
+                    Panel.ZIndex="0"
+                    AcceptsReturn="True"
+                    Background="White"
+                    MouseDoubleClick="tempSave"
+                    SpellCheck.IsEnabled="True"
+                    Text=""
+                    TextWrapping="Wrap" />
+            </ScrollViewer>
 
         </Grid>
     </Grid>
