@@ -15,8 +15,15 @@ namespace BranchWriter_Code
     {
         private void OnStartup(object sender, StartupEventArgs e)
         {
-            SelectFile selectFile = new SelectFile();
-            selectFile.Show();
+            if (e.Args.Length > 0)
+            {
+                FileHandler.PassPathToMain(e.Args[0]);
+            }
+            else
+            {
+                SelectFile selectFile = new SelectFile();
+                selectFile.Show();
+            }
         }
     }
 }

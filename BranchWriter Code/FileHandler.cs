@@ -43,5 +43,10 @@ namespace BranchWriter_Code
 
             else return null;
         }
+        
+        public static void PassPathToMain(string path)
+        {
+            MainWindow.path = path;
+        }
     }
 }
