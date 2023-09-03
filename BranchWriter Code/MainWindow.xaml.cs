@@ -20,9 +20,34 @@ namespace BranchWriter_Code
     /// </summary>
     public partial class MainWindow : Window
     {
+        bool isMaximised = false;
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void CloseButton(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void SizeChangeButton(object sender, RoutedEventArgs e)
+        {
+            if (isMaximised == false)
+            {
+                this.WindowState = WindowState.Maximized;
+                isMaximised= true;
+            }
+            else
+            {
+                this.WindowState = WindowState.Normal;
+            }
+        }
+
+        private void MinimiseButton(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
         }
     }
 }

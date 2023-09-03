@@ -8,6 +8,58 @@
     Title="MainWindow"
     Width="1200"
     Height="650"
+    ResizeMode="NoResize"
+    WindowStyle="None"
     mc:Ignorable="d">
-    <Grid />
+    <Grid Style="{StaticResource Body}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.045*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Rectangle
+            Grid.Row="0"
+            Grid.ColumnSpan="4"
+            Fill="#222222" />
+
+        <TextBlock
+            Margin="6"
+            VerticalAlignment="Center"
+            Style="{StaticResource Text}"
+            Text="Branch Writer" />
+
+        <Button
+            Grid.Row="0"
+            Grid.Column="1"
+            Click="MinimiseButton"
+            Content="_"
+            Style="{StaticResource Button}" />
+        <Button
+            Grid.Row="0"
+            Grid.Column="2"
+            Click="SizeChangeButton"
+            Content="□"
+            Style="{StaticResource Button}" />
+        <Button
+            Grid.Row="0"
+            Grid.Column="3"
+            Click="CloseButton"
+            Content="x"
+            Style="{StaticResource Button}" />
+
+        <Grid Grid.Row="1" Grid.ColumnSpan="4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+        </Grid>
+    </Grid>
 </Window>
