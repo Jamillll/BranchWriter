@@ -1,0 +1,48 @@
+﻿<Window
+    x:Class="BranchWriter_Code.SelectFile"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:BranchWriter_Code"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="SelectFile"
+    Width="600"
+    Height="350"
+    ResizeMode="NoResize"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <Grid Style="{StaticResource Body}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.045*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Rectangle Grid.ColumnSpan="2" Fill="#222222" />
+
+        <TextBlock
+            MouseDown="WindowBarMouseDown"
+            Style="{StaticResource SmallText}"
+            Text="Select a file" />
+
+        <Button
+            Grid.Column="1"
+            VerticalAlignment="Center"
+            Click="CloseButton"
+            Content="x"
+            FontSize="10"
+            Style="{StaticResource Button}" />
+
+        <Grid Grid.Row="1" Grid.ColumnSpan="4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+        </Grid>
+    </Grid>
+</Window>

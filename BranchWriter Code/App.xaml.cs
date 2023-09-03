@@ -13,5 +13,13 @@ namespace BranchWriter_Code
     /// </summary>
     public partial class App : Application
     {
+        private void OnStartup(object sender, StartupEventArgs e)
+        {
+            if (FileHandler.path == null)
+            {
+                SelectFile selectFile = new SelectFile();
+                selectFile.Show();
+            }
+        }
     }
 }

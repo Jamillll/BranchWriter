@@ -31,6 +31,7 @@
         <TextBlock
             Margin="6"
             VerticalAlignment="Center"
+            MouseDown="WindowBarMouseDown"
             Style="{StaticResource Text}"
             Text="Branch Writer" />
 
@@ -58,8 +59,12 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
+
+            <Rectangle Grid.Column="0" Fill="#222222" />
+
         </Grid>
     </Grid>
 </Window>

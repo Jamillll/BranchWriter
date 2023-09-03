@@ -29,7 +29,7 @@ namespace BranchWriter_Code
 
         private void CloseButton(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            System.Environment.Exit(0);
         }
 
         private void SizeChangeButton(object sender, RoutedEventArgs e)
@@ -48,6 +48,14 @@ namespace BranchWriter_Code
         private void MinimiseButton(object sender, RoutedEventArgs e)
         {
             this.WindowState = WindowState.Minimized;
+        }
+
+        private void WindowBarMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
         }
     }
 }
