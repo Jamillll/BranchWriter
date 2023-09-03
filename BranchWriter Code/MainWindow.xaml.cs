@@ -57,5 +57,13 @@ namespace BranchWriter_Code
                 DragMove();
             }
         }
+
+        private void tempSave(object sender, MouseButtonEventArgs e)
+        {
+            if (FileHandler.WriteToFile(DisplayPage1.Text))
+            {
+                MessageBox.Show("It worked");
+            }
+        }
     }
 }
