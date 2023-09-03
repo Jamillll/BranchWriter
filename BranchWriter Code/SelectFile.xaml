@@ -43,6 +43,13 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
+
+            <Button
+                AllowDrop="True"
+                Click="FileOpenerClicked"
+                Content="Drag a file here or click to open file explorer"
+                Drop="FileDropped"
+                Style="{StaticResource Button}" />
         </Grid>
     </Grid>
 </Window>
