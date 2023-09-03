@@ -5,9 +5,11 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:BranchWriter_Code"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="Main"
     Title="Branch Writer"
     Width="1200"
     Height="650"
+    Activated="InFocus"
     ResizeMode="NoResize"
     WindowStyle="None"
     mc:Ignorable="d">
@@ -78,7 +80,8 @@
                 Background="White"
                 MouseDoubleClick="tempSave"
                 SpellCheck.IsEnabled="True"
-                Text="" />
+                Text=""
+                TextWrapping="Wrap" />
 
         </Grid>
     </Grid>

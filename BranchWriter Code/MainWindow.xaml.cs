@@ -20,6 +20,8 @@ namespace BranchWriter_Code
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static string? path;
+
         bool isMaximised = false;
 
         public MainWindow()
@@ -60,10 +62,15 @@ namespace BranchWriter_Code
 
         private void tempSave(object sender, MouseButtonEventArgs e)
         {
-            if (FileHandler.WriteToFile(DisplayPage1.Text))
+            if (FileHandler.WriteToFile(MainWindow.path, DisplayPage1.Text))
             {
                 MessageBox.Show("It worked");
             }
+        }
+
+        private void InFocus(object sender, EventArgs e)
+        {
+            DisplayPage1.Text = FileHandler.ReadFromFile(path);
         }
     }
 }

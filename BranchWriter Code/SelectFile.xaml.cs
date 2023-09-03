@@ -48,7 +48,7 @@ namespace BranchWriter_Code
 
                 if (FileHandler.IsLeaf(filePaths[0]))
                 {
-                    FileHandler.path = filePaths[0];
+                    MainWindow.path = filePaths[0];
                 }
 
                 else
@@ -71,7 +71,7 @@ namespace BranchWriter_Code
             {
                 if (FileHandler.IsLeaf(fileExplorer.FileName))
                 {
-                    FileHandler.path = fileExplorer.FileName;
+                    MainWindow.path = fileExplorer.FileName;
                     this.Close();
                 }
 
