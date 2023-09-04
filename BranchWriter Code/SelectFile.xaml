@@ -47,7 +47,7 @@
             <Button
                 AllowDrop="True"
                 Click="FileOpenerClicked"
-                Content="Drag a file here or click to open file explorer"
+                Content="Drag a leaf file here or click to open file explorer"
                 Drop="FileDropped"
                 Style="{StaticResource Button}" />
         </Grid>

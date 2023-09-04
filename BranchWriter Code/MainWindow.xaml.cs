@@ -20,13 +20,14 @@ namespace BranchWriter_Code
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static string? path;
+        public static string? path = "";
 
         bool isMaximised = false;
 
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = this;
         }
 
         private void CloseButton(object sender, RoutedEventArgs e)
@@ -71,6 +72,7 @@ namespace BranchWriter_Code
         private void InFocus(object sender, EventArgs e)
         {
             DisplayPage1.Text = FileHandler.ReadFromFile(path);
+            displayPath.Text = path;
         }
     }
 }

@@ -19,15 +19,16 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="25*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="13*" />
+            <ColumnDefinition Width="20*" />
+            <ColumnDefinition Width="1.2*" />
+            <ColumnDefinition Width="1.2*" />
+            <ColumnDefinition Width="1.2*" />
         </Grid.ColumnDefinitions>
 
         <Rectangle
             Grid.Row="0"
-            Grid.ColumnSpan="4"
+            Grid.ColumnSpan="5"
             Panel.ZIndex="1"
             Fill="#222222" />
 
@@ -38,26 +39,34 @@
             Style="{StaticResource Text}"
             Text="Branch Writer" />
 
+        <TextBlock
+            x:Name="displayPath"
+            Grid.Column="1"
+            Margin="6"
+            VerticalAlignment="Center"
+            MouseDown="WindowBarMouseDown"
+            Style="{StaticResource Text}" />
+
         <Button
             Grid.Row="0"
-            Grid.Column="1"
+            Grid.Column="2"
             Click="MinimiseButton"
             Content="_"
             Style="{StaticResource Button}" />
         <Button
             Grid.Row="0"
-            Grid.Column="2"
+            Grid.Column="3"
             Click="SizeChangeButton"
             Content="□"
             Style="{StaticResource Button}" />
         <Button
             Grid.Row="0"
-            Grid.Column="3"
+            Grid.Column="4"
             Click="CloseButton"
             Content="x"
             Style="{StaticResource Button}" />
 
-        <Grid Grid.Row="1" Grid.ColumnSpan="4">
+        <Grid Grid.Row="1" Grid.ColumnSpan="5">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
@@ -72,8 +81,8 @@
                 <TextBox
                     x:Name="DisplayPage1"
                     Grid.Column="1"
-                    Width="600"
-                    Height="1000"
+                    Width="720"
+                    Height="960"
                     Margin="0,20,0,20"
                     Padding="60"
                     Panel.ZIndex="0"
