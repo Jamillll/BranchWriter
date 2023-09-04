@@ -18,7 +18,7 @@ TODO:<br>
     Improve the appearance of buttons on hover effects<br>
     Sound effects on clicks for example<br>
     Add a settings tab with a bunch of colour changing options and other options<br>
-    Allow the user to pick a background image (and if they want it blurred) for the <br>
+    Allow the user to pick a background image (and if they want it blurred) for the scrollviewer <br>
     <br>
   Farrrr future features:<br>
     Add support for edditing text files<br>
