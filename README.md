@@ -11,6 +11,7 @@ TODO:<br>
     Add bold and italics options for text<br>
     Add picture adding functionality<br>
     Export to text file, google docs and maybe microsoft word<br>
+    Add support for edditing text files<br>
     <br>
   Cosmetic updates:<br>
     Make the scroll bar actually match everything else<br>
@@ -21,4 +22,4 @@ TODO:<br>
     Allow the user to pick a background image (and if they want it blurred) for the scrollviewer <br>
     <br>
   Farrrr future features:<br>
-    Add support for edditing text files<br>
+      Writing prediction software which will likely require some form of machine learning or smth idk-
