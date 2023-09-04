@@ -82,5 +82,26 @@ namespace BranchWriter_Code
                 }
             }
         }
+
+        private void FileCreatorClicked(object sender, RoutedEventArgs e)
+        {        
+            SaveFileDialog createFile = new SaveFileDialog();
+
+            createFile.DefaultExt = ".leaf";
+            createFile.Filter = "leaf file (*.leaf)|*.leaf";
+
+            // Process save file dialog box results
+            if (createFile.ShowDialog() == true)
+            {
+                // Save document
+                MainWindow.path = createFile.FileName;
+                FileHandler.WriteToFile(createFile.FileName, "");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("A file has not been created");
+            }
+        }
     }
 }

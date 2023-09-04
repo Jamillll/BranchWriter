@@ -19,16 +19,11 @@ namespace BranchWriter_Code
 
         public static bool WriteToFile(string writePath, string textToEnter)
         {
-            if (File.Exists(writePath))
+            using (BinaryWriter writer = new BinaryWriter(File.OpenWrite(writePath)))
             {
-                using (BinaryWriter writer = new BinaryWriter(File.OpenWrite(writePath)))
-                {
-                    writer.Write(textToEnter);
-                    return true;
-                }
+                writer.Write(textToEnter);
+                return true;
             }
-
-            else return false;
         }
 
         public static string? ReadFromFile(string readPath)
@@ -44,9 +39,9 @@ namespace BranchWriter_Code
             else return null;
         }
         
-        public static void PassPathToMain(string path)
+        public static void PassPathToMain(string passingPath)
         {
-            MainWindow.path = path;
+            MainWindow.path = passingPath;
         }
     }
 }

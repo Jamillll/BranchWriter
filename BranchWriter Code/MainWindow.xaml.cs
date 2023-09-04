@@ -20,7 +20,7 @@ namespace BranchWriter_Code
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static string? path = "";
+        public static string? path;
 
         bool isMaximised = false;
 
@@ -32,6 +32,7 @@ namespace BranchWriter_Code
 
         private void CloseButton(object sender, RoutedEventArgs e)
         {
+            FileHandler.WriteToFile(MainWindow.path, DisplayPage1.Text);
             System.Environment.Exit(0);
         }
 

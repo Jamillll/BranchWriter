@@ -13,6 +13,12 @@
     ResizeMode="NoResize"
     WindowStyle="None"
     mc:Ignorable="d">
+    <Window.InputBindings>
+        <KeyBinding
+            Key="S"
+            Command=""
+            Modifiers="Ctrl" />
+    </Window.InputBindings>
     <Grid Style="{StaticResource Body}">
         <Grid.RowDefinitions>
             <RowDefinition Height="0.045*" />
@@ -88,7 +94,6 @@
                     Panel.ZIndex="0"
                     AcceptsReturn="True"
                     Background="White"
-                    MouseDoubleClick="tempSave"
                     SpellCheck.IsEnabled="True"
                     Text=""
                     TextWrapping="Wrap" />
