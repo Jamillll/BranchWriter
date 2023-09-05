@@ -83,6 +83,13 @@
 
             <Rectangle Grid.Column="0" Fill="#222222" />
 
+            <Button
+                Width="100"
+                Height="40"
+                Click="BoldClick"
+                Content="Bold"
+                Style="{StaticResource Button}" />
+
             <ScrollViewer Grid.Column="2">
                 <TextBox
                     x:Name="DisplayPage1"
