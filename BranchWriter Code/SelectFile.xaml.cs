@@ -95,7 +95,6 @@ namespace BranchWriter_Code
             {
                 // Save document
                 MainWindow.path = createFile.FileName;
-                FileHandler.WriteToFile(createFile.FileName, "");
                 this.Close();
             }
             else

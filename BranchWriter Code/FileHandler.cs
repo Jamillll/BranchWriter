@@ -17,13 +17,12 @@ namespace BranchWriter_Code
             else return false;
         }
 
-        public static bool WriteToFile(string writePath, string textToEnter)
+        public static void WriteToFile(string writePath, TextRange content)
         {
-            using (BinaryWriter writer = new BinaryWriter(File.OpenWrite(writePath)))
-            {
-                writer.Write(textToEnter);
-                return true;
-            }
+            FileStream stream = new FileStream(writePath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
+
+            content.Save(stream, DataFormats.XamlPackage);
+            stream.Close();
         }
 
         public static string? ReadFromFile(string readPath)

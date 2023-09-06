@@ -9,7 +9,6 @@
     Title="Branch Writer"
     Width="1200"
     Height="650"
-    Activated="InFocus"
     ResizeMode="NoResize"
     WindowStyle="None"
     mc:Ignorable="d">
@@ -86,12 +85,11 @@
             <Button
                 Width="100"
                 Height="40"
-                Click="BoldClick"
                 Content="Bold"
                 Style="{StaticResource Button}" />
 
             <ScrollViewer Grid.Column="2">
-                <TextBox
+                <RichTextBox
                     x:Name="DisplayPage1"
                     Grid.Column="1"
                     Width="720"
@@ -101,9 +99,7 @@
                     Panel.ZIndex="0"
                     AcceptsReturn="True"
                     Background="White"
-                    SpellCheck.IsEnabled="True"
-                    Text=""
-                    TextWrapping="Wrap" />
+                    SpellCheck.IsEnabled="True" />
             </ScrollViewer>
 
         </Grid>
