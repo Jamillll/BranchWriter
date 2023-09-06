@@ -25,17 +25,20 @@ namespace BranchWriter_Code
             stream.Close();
         }
 
-        public static string? ReadFromFile(string readPath)
+        public static TextRange? ReadFromFile(string readPath, TextRange content)
         {
             if (File.Exists(readPath))
             {
-                using (BinaryReader reader = new BinaryReader(File.OpenRead(readPath)))
-                {
-                    return reader.ReadString();
-                }
-            }
+                FileStream stream = new FileStream(readPath, FileMode.Open, FileAccess.ReadWrite);
 
-            else return null;
+                content.Load(stream, DataFormats.XamlPackage);
+                stream.Close();
+                return content;
+            }
+            else
+            {
+                return null;
+            }
         }
         
         public static void PassPathToMain(string passingPath)

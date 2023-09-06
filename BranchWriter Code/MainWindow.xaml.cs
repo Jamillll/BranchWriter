@@ -23,6 +23,8 @@ namespace BranchWriter_Code
         public static string? path;
 
         bool isMaximised = false;
+        bool isLoaded = false;
+
 
         public MainWindow()
         {
@@ -66,11 +68,15 @@ namespace BranchWriter_Code
             }
         }
 
-        //private void InFocus(object sender, EventArgs e)
-        //{
-        //    DisplayPage1.Text = FileHandler.ReadFromFile(path);
-        //    displayPath.Text = path;
-        //}
+        private void WindowMouseHover(object sender, MouseEventArgs e)
+        {
+            if (!isLoaded && path != null)
+            {
+                FileHandler.ReadFromFile(path, new TextRange(DisplayPage1.Document.ContentStart, DisplayPage1.Document.ContentEnd));
+                displayPath.Text = path;
+                isLoaded = true;
+            }
+        }
 
         //private void BoldClick(object sender, RoutedEventArgs e)
         //{

@@ -9,6 +9,7 @@
     Title="Branch Writer"
     Width="1200"
     Height="650"
+    MouseEnter="WindowMouseHover"
     ResizeMode="NoResize"
     WindowStyle="None"
     mc:Ignorable="d">
