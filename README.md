@@ -2,9 +2,8 @@
 This is a text editor like notepad and wordpress, I plan to increase the amount of features with time hopefully including image support to give it additional functionality. I hope to be able to replace my use of microsoft word and google docs meaning I will likely need a way to convert between the file types as well.
 
 TODO:<br>
-    Replace text box with rich text box<br>
+    Create buttons for Itallics, combobox for fontsize and font<br>
     Add the ability to create additional pages for text if needed<br>
-    Change saving method to a keyboard shortcut and button<br>
     <br>
   Cosmetic updates:<br>
     Make the scroll bar actually match everything else<br>
