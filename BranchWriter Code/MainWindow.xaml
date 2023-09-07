@@ -86,6 +86,7 @@
             <Button
                 Width="100"
                 Height="40"
+                Click="BoldClick"
                 Content="Bold"
                 Style="{StaticResource Button}" />
 

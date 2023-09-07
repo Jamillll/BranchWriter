@@ -78,64 +78,15 @@ namespace BranchWriter_Code
             }
         }
 
-        //private void BoldClick(object sender, RoutedEventArgs e)
-        //{
-        //    string currentText = DisplayPage1.Text;
-        //    string workingText = "";
-        //    bool isBold = false;
+        private void BoldClick(object sender, RoutedEventArgs e)
+        {
+            var oldContent = DisplayPage1.Selection.GetPropertyValue(TextElement.FontWeightProperty);
+            DisplayPage1.Selection.ApplyPropertyValue(TextElement.FontWeightProperty, FontWeights.Normal);
 
-        //    if (DisplayPage1.SelectionLength > 0)
-        //    {
-        //        if (currentText[DisplayPage1.SelectionStart] == '<')
-        //        {
-        //            isBold = true;
-        //        }
-
-        //        if (isBold)
-        //        {
-        //            for (int i = 0; i < currentText.Length; i++)
-        //            {
-        //                if (currentText[i] == '<' && currentText[i + 1] == 'b' && currentText[i + 2] == '>')
-        //                {
-        //                    i += 2;
-        //                    continue;
-        //                }
-        //                else if (currentText[i] == '<' && currentText[i + 1] == '/' && currentText[i + 2] == 'b' && currentText[i + 3] == '>')
-        //                {
-        //                    i += 3;
-        //                    continue;
-        //                }
-
-        //                workingText += currentText[i];
-        //            }
-        //        }
-        //        else
-        //        {
-        //            bool boldCLosed = false;
-
-        //            for (int i = 0; i < currentText.Length; i++)
-        //            {
-        //                if (i == DisplayPage1.SelectionStart)
-        //                {
-        //                    workingText += "<b>";
-        //                }
-        //                else if (i == DisplayPage1.SelectionStart + DisplayPage1.SelectionLength)
-        //                {
-        //                    workingText += "</b>";
-        //                    boldCLosed = true;
-        //                }
-
-        //                workingText += currentText[i];
-        //            }
-
-        //            if (!boldCLosed)
-        //            {
-        //                workingText += "</b>";
-        //            }
-        //        }
-
-        //        DisplayPage1.Text = workingText;
-        //    }
-        //}
+            if (DisplayPage1.Selection.GetPropertyValue(TextElement.FontWeightProperty) == oldContent)
+            {
+                DisplayPage1.Selection.ApplyPropertyValue(TextElement.FontWeightProperty, FontWeights.Bold);
+            }
+        }
     }
 }
