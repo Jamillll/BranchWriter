@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -25,11 +26,26 @@ namespace BranchWriter_Code
         bool isMaximised = false;
         bool isLoaded = false;
 
+        List<string> fontList = new List<string>();
 
         public MainWindow()
         {
             InitializeComponent();
             this.DataContext = this;
+        }
+
+        private void MainLoaded(object sender, RoutedEventArgs e)
+        {
+            foreach (var font in Fonts.SystemFontFamilies)
+            {
+                FontMenu.Items.Add(font);
+                fontList.Add(font.ToString());
+            }
+
+            for (int i = 0; i < 50; i++)
+            {
+                FontSizeMenu.Items.Add(i + 1);
+            }
         }
 
         private void CloseButton(object sender, RoutedEventArgs e)
@@ -78,14 +94,52 @@ namespace BranchWriter_Code
             }
         }
 
-        private void BoldClick(object sender, RoutedEventArgs e)
+        private void TextEffectClick(object sender, RoutedEventArgs e)
         {
-            var oldContent = DisplayPage1.Selection.GetPropertyValue(TextElement.FontWeightProperty);
-            DisplayPage1.Selection.ApplyPropertyValue(TextElement.FontWeightProperty, FontWeights.Normal);
+            Button button = sender as Button;
+            var oldBoldState = DisplayPage1.Selection.GetPropertyValue(TextElement.FontWeightProperty);
+            var oldItalicState = DisplayPage1.Selection.GetPropertyValue(TextElement.FontStyleProperty);
 
-            if (DisplayPage1.Selection.GetPropertyValue(TextElement.FontWeightProperty) == oldContent)
+            switch (button.Name)
             {
-                DisplayPage1.Selection.ApplyPropertyValue(TextElement.FontWeightProperty, FontWeights.Bold);
+                case "Bold":
+                    DisplayPage1.Selection.ApplyPropertyValue(TextElement.FontWeightProperty, FontWeights.Normal);
+
+                    if (DisplayPage1.Selection.GetPropertyValue(TextElement.FontWeightProperty) == oldBoldState)
+                    {
+                        DisplayPage1.Selection.ApplyPropertyValue(TextElement.FontWeightProperty, FontWeights.Bold);
+                    }
+                break;
+
+                case "Italic":
+                    DisplayPage1.Selection.ApplyPropertyValue(TextElement.FontStyleProperty, FontStyles.Normal);
+
+                    if (DisplayPage1.Selection.GetPropertyValue(TextElement.FontStyleProperty) == oldItalicState)
+                    {
+                        DisplayPage1.Selection.ApplyPropertyValue(TextElement.FontStyleProperty, FontStyles.Italic);
+                    }
+                    break;
+
+                case "Remove":
+                    DisplayPage1.Selection.ApplyPropertyValue(TextElement.FontStyleProperty, FontStyles.Normal);
+                    DisplayPage1.Selection.ApplyPropertyValue(TextElement.FontWeightProperty, FontWeights.Normal);
+                    break;
+            }
+        }
+
+        private void FontSelected(object sender, SelectionChangedEventArgs e)
+        {
+            if (DisplayPage1.Selection.Text.Length > 0)
+            {
+                DisplayPage1.Selection.ApplyPropertyValue(TextElement.FontFamilyProperty, new FontFamily(fontList[FontMenu.SelectedIndex]));
+            }
+        }
+
+        private void FontSizeSelected(object sender, SelectionChangedEventArgs e)
+        {
+            if (DisplayPage1.Selection.Text.Length > 0)
+            {
+                DisplayPage1.Selection.ApplyPropertyValue(TextElement.FontSizeProperty, Convert.ToDouble(FontSizeMenu.SelectedIndex + 1));
             }
         }
     }

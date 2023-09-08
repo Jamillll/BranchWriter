@@ -9,6 +9,7 @@
     Title="Branch Writer"
     Width="1200"
     Height="650"
+    Loaded="MainLoaded"
     MouseEnter="WindowMouseHover"
     ResizeMode="NoResize"
     WindowStyle="None"
@@ -81,14 +82,75 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Rectangle Grid.Column="0" Fill="#222222" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="10*" />
+                </Grid.RowDefinitions>
 
-            <Button
-                Width="100"
-                Height="40"
-                Click="BoldClick"
-                Content="Bold"
-                Style="{StaticResource Button}" />
+                <Rectangle
+                    Grid.RowSpan="3"
+                    Grid.ColumnSpan="5"
+                    Fill="#222222" />
+
+                <Button
+                    x:Name="Bold"
+                    Width="50"
+                    Height="40"
+                    HorizontalAlignment="Left"
+                    Click="TextEffectClick"
+                    Content="b"
+                    FontWeight="Bold"
+                    Style="{StaticResource Button}" />
+                <Button
+                    x:Name="Italic"
+                    Grid.Column="1"
+                    Width="50"
+                    Height="40"
+                    HorizontalAlignment="Left"
+                    Click="TextEffectClick"
+                    Content="i"
+                    FontStyle="Italic"
+                    Style="{StaticResource Button}" />
+
+                <Button
+                    x:Name="Remove"
+                    Grid.Column="2"
+                    Width="50"
+                    Height="40"
+                    HorizontalAlignment="Left"
+                    Click="TextEffectClick"
+                    Style="{StaticResource Button}">
+                    <TextBlock
+                        FontSize="20"
+                        Style="{StaticResource SmallText}"
+                        Text="R"
+                        TextDecorations="Strikethrough" />
+                </Button>
+
+                <ComboBox
+                    x:Name="FontMenu"
+                    Grid.Row="1"
+                    Grid.ColumnSpan="3"
+                    SelectedValuePath="Content"
+                    SelectionChanged="FontSelected" />
+
+                <ComboBox
+                    x:Name="FontSizeMenu"
+                    Grid.Row="1"
+                    Grid.Column="3"
+                    Grid.ColumnSpan="2"
+                    SelectedValuePath="Content"
+                    SelectionChanged="FontSizeSelected" />
+            </Grid>
 
             <ScrollViewer Grid.Column="2">
                 <RichTextBox
