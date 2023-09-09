@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-G:\My Drive\Project\BranchWriter\BranchWriter Code\obj\Debug\net7.0-windows\
+G:\My Drive\Project\BranchWriter\BranchWriter Code\obj\Release\net7.0-windows\
 BranchWriter_Code
 none
 false
-TRACE;DEBUG;NET;NET7_0;NETCOREAPP
+TRACE;RELEASE;NET;NET7_0;NETCOREAPP
 G:\My Drive\Project\BranchWriter\BranchWriter Code\App.xaml
 2-1839418146
 
-7-333440889
+7-1013001638
 198-2048575587
 MainWindow.xaml;SelectFile.xaml;
 
-False
+True
 

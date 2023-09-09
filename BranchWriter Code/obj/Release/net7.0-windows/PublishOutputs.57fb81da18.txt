@@ -1,0 +1,5 @@
+G:\My Drive\Project\BranchWriter\BranchWriter\BranchWriter Code.exe
+G:\My Drive\Project\BranchWriter\BranchWriter\BranchWriter Code.dll
+G:\My Drive\Project\BranchWriter\BranchWriter\BranchWriter Code.deps.json
+G:\My Drive\Project\BranchWriter\BranchWriter\BranchWriter Code.runtimeconfig.json
+G:\My Drive\Project\BranchWriter\BranchWriter\BranchWriter Code.pdb

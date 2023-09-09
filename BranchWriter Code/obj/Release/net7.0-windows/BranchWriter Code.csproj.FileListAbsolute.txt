@@ -1,0 +1,24 @@
+G:\My Drive\Project\BranchWriter\BranchWriter Code\bin\Release\net7.0-windows\BranchWriter Code.exe
+G:\My Drive\Project\BranchWriter\BranchWriter Code\bin\Release\net7.0-windows\BranchWriter Code.deps.json
+G:\My Drive\Project\BranchWriter\BranchWriter Code\bin\Release\net7.0-windows\BranchWriter Code.runtimeconfig.json
+G:\My Drive\Project\BranchWriter\BranchWriter Code\bin\Release\net7.0-windows\BranchWriter Code.dll
+G:\My Drive\Project\BranchWriter\BranchWriter Code\bin\Release\net7.0-windows\BranchWriter Code.pdb
+G:\My Drive\Project\BranchWriter\BranchWriter Code\obj\Release\net7.0-windows\BranchWriter Code.csproj.AssemblyReference.cache
+G:\My Drive\Project\BranchWriter\BranchWriter Code\obj\Release\net7.0-windows\MainWindow.g.cs
+G:\My Drive\Project\BranchWriter\BranchWriter Code\obj\Release\net7.0-windows\SelectFile.g.cs
+G:\My Drive\Project\BranchWriter\BranchWriter Code\obj\Release\net7.0-windows\App.g.cs
+G:\My Drive\Project\BranchWriter\BranchWriter Code\obj\Release\net7.0-windows\BranchWriter Code_MarkupCompile.cache
+G:\My Drive\Project\BranchWriter\BranchWriter Code\obj\Release\net7.0-windows\BranchWriter Code_MarkupCompile.lref
+G:\My Drive\Project\BranchWriter\BranchWriter Code\obj\Release\net7.0-windows\App.baml
+G:\My Drive\Project\BranchWriter\BranchWriter Code\obj\Release\net7.0-windows\MainWindow.baml
+G:\My Drive\Project\BranchWriter\BranchWriter Code\obj\Release\net7.0-windows\SelectFile.baml
+G:\My Drive\Project\BranchWriter\BranchWriter Code\obj\Release\net7.0-windows\BranchWriter Code.g.resources
+G:\My Drive\Project\BranchWriter\BranchWriter Code\obj\Release\net7.0-windows\BranchWriter Code.GeneratedMSBuildEditorConfig.editorconfig
+G:\My Drive\Project\BranchWriter\BranchWriter Code\obj\Release\net7.0-windows\BranchWriter Code.AssemblyInfoInputs.cache
+G:\My Drive\Project\BranchWriter\BranchWriter Code\obj\Release\net7.0-windows\BranchWriter Code.AssemblyInfo.cs
+G:\My Drive\Project\BranchWriter\BranchWriter Code\obj\Release\net7.0-windows\BranchWriter Code.csproj.CoreCompileInputs.cache
+G:\My Drive\Project\BranchWriter\BranchWriter Code\obj\Release\net7.0-windows\BranchWriter Code.dll
+G:\My Drive\Project\BranchWriter\BranchWriter Code\obj\Release\net7.0-windows\refint\BranchWriter Code.dll
+G:\My Drive\Project\BranchWriter\BranchWriter Code\obj\Release\net7.0-windows\BranchWriter Code.pdb
+G:\My Drive\Project\BranchWriter\BranchWriter Code\obj\Release\net7.0-windows\BranchWriter Code.genruntimeconfig.cache
+G:\My Drive\Project\BranchWriter\BranchWriter Code\obj\Release\net7.0-windows\ref\BranchWriter Code.dll
