@@ -152,20 +152,17 @@
                     SelectionChanged="FontSizeSelected" />
             </Grid>
 
-            <ScrollViewer Grid.Column="2">
-                <RichTextBox
-                    x:Name="DisplayPage1"
-                    Grid.Column="1"
-                    Width="720"
-                    Height="960"
-                    Margin="0,20,0,20"
-                    Padding="60"
-                    Panel.ZIndex="0"
-                    AcceptsReturn="True"
-                    Background="White"
-                    SpellCheck.IsEnabled="True" />
-            </ScrollViewer>
-
+            <RichTextBox
+                x:Name="DisplayPage1"
+                Grid.Column="1"
+                Width="auto"
+                Height="auto"
+                Padding="60"
+                Panel.ZIndex="0"
+                AcceptsReturn="True"
+                Background="White"
+                SpellCheck.IsEnabled="True"
+                VerticalScrollBarVisibility="Visible" />
         </Grid>
     </Grid>
 </Window>
