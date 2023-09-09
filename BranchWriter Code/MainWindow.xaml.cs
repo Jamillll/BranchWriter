@@ -63,11 +63,12 @@ namespace BranchWriter_Code
             if (isMaximised == false)
             {
                 this.WindowState = WindowState.Maximized;
-                isMaximised= true;
+                isMaximised = true;
             }
             else
             {
                 this.WindowState = WindowState.Normal;
+                isMaximised = false;
             }
         }
 
