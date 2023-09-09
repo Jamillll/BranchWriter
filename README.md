@@ -18,3 +18,7 @@ TODO:<br>
     <br>
   Farrrr future features:<br>
       Writing prediction software which will likely require some form of machine learning or smth idk-
+
+BUGS:<br>
+    Text size won't change when the same option is selected again due to only updating on selection change<br>
+    Won't change to the option of the current text size which is useful information to have<br>
