@@ -141,7 +141,8 @@
                     Grid.Row="1"
                     Grid.ColumnSpan="3"
                     SelectedValuePath="Content"
-                    SelectionChanged="FontSelected" />
+                    SelectionChanged="FontSelected"
+                    Style="{StaticResource ComboBox}" />
 
                 <ComboBox
                     x:Name="FontSizeMenu"
@@ -149,7 +150,8 @@
                     Grid.Column="3"
                     Grid.ColumnSpan="2"
                     SelectedValuePath="Content"
-                    SelectionChanged="FontSizeSelected" />
+                    SelectionChanged="FontSizeSelected"
+                    Style="{StaticResource ComboBox}" />
             </Grid>
 
             <RichTextBox
